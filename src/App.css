@@ -1,0 +1,20 @@
+:root{
+  --base-color: #f1cf69;
+  --primary-color: #334b35;
+  --secondary-color: #6d8c54;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
