@@ -60,9 +60,7 @@ const Cart = (props) => {
   return (
     <>
       <cartContax.Provider
-        value={{state.item,
-  state.totalAmount,
-  state.totalItem , removeItem, clearCart, increment, decrement  , addItem}}
+        value={{item : state.item, totalAmount : state.totalAmount, totalItem : state.totalItem , removeItem, clearCart, increment, decrement  , addItem}}
       >
 
         {/* <ContextCart /> */}
