@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import React, { createContext } from 'react'
 
 export const Usercontext = createContext()
@@ -38,11 +38,11 @@ const Userdata = (props) => {
 
     const getuser = async()=>{
         try {
-            const response = await fetch("https://farmeazy-api.herokuapp.comapi/auth/getuser", {
+            const response = await fetch("https://farmeazy-api.herokuapp.com/api/auth/getuser", {
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
             headers: {
               'Content-Type': 'application/json',
-              'auth-token' : Cookies.get('token')
+              'auth-token' : localStorage.getItem('token')
             }
           });
           const data = await response.json();

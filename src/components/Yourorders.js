@@ -28,7 +28,7 @@ const Yourorders = () => {
                   })
               }):console.log('loading')} */}
 
-        {prevorder.result.length>0
+        {prevorder
           ? prevorder.result.map((data) => {
               return (
                   <Orderitem

@@ -32,14 +32,14 @@ const Header = ({productsearch , setsearch}) => {
     const {getuser} = useContext(Usercontext);
 
     const [login, setlogin] = useState(false)
-    const [username, setusername] = useState(' ')
+    const [username, setusername] = useState('')
 
    useEffect(() => {
-    if(Cookies.get('token')){
+    if(localStorage.getItem('token')){
         setlogin(true)
         getuser().then((data=>{
             console.log(data)
-            console.log(Cookies.get('token'))
+            console.log(localStorage.getItem('token'))
             setusername(data.result.username)
         }))
     }

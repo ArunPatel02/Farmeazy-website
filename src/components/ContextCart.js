@@ -6,7 +6,7 @@ import '../css/cart.css'
 import "../css/uploadproduct.css";
 
 import { Productcontext } from "../context/Productdata";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 const ContextCart = () => {
   const { item, totalItem, totalAmount, clearCart } = useContext(cartContax);
@@ -21,7 +21,7 @@ const ContextCart = () => {
 
   const placeyourorder = (e) => {
     e.preventDefault();
-    if (!Cookies.get("token")) {
+    if (!localStorage.getItem("token")) {
       return alert('login to place your order')
     }
     const itemdata = item.map((item) => { return ({ id: item.id, product_name: item.product_name, product_price: item.product_price, quantity: item.quantity, product_images: item.product_images[0].url }) })

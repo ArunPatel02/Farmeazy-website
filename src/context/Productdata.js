@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import React, { createContext } from 'react'
 
 export const Productcontext = createContext();
@@ -40,7 +40,7 @@ const placeorder = async(orderdetail)=>{
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : Cookies.get("token")
+        'auth-token' : localStorage.getItem("token")
       },
       body : JSON.stringify(orderdetail)
     });
@@ -54,11 +54,11 @@ const placeorder = async(orderdetail)=>{
 
 const getorders = async(id)=>{
   try {
-      const response = await fetch(`/api/auth/getorders`, {
+      const response = await fetch(`https://farmeazy-api.herokuapp.com/api/auth/getorders`, {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       headers: {
         'Content-Type': 'application/json',
-        'auth-token' : Cookies.get("token")
+        'auth-token' : localStorage.getItem("token")
       },
     });
     const data = await response.json();

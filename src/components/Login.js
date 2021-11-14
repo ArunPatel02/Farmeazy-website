@@ -2,14 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { Usercontext } from "../context/Userdata";
 import "../css/Login.css";
-import cookies from 'js-cookie';
 
 export default function Login(props) {
   const {registeruser , loginuser} = useContext(Usercontext)
 
   const history = useHistory();
 
-  if(cookies.get('token')){
+  if(localStorage.getItem('token')){
     history.goBack();
   }
 
@@ -92,7 +91,7 @@ export default function Login(props) {
         console.log(data);
         props.setloader(false)
         if (data.success) {
-          cookies.set('token' , data.userdata.token , { expires: 7 })
+          localStorage.setItem('token' , data.userdata.token)
           history.goBack();
         }
         else{
@@ -108,7 +107,7 @@ export default function Login(props) {
         console.log(data);
         props.setloader(false)
         if (data.success) {
-          cookies.set('token' , data.userdata.token , { expires: 7 })
+          localStorage.setItem('token' , data.userdata.token)
           history.goBack();
         }
         else{
