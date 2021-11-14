@@ -88,7 +88,7 @@ const Header = ({productsearch , setsearch}) => {
                         <li className={location.pathname==='/about'?"active":"link"} onClick={removetoggle} ><Link to="/about" >About</Link></li>
                         <li className={location.pathname==='/services'?"active":"link"} onClick={removetoggle} ><Link to="/services">Services</Link></li>
                         <li className={location.pathname==='/shop'?"active":"link"} onClick={removetoggle} ><Link to="/shop">Shop</Link></li>
-                        <li className={location.pathname==='/uploadproduct'?"active":"link"} onClick={removetoggle} ><Link to="/uploadproduct">upload</Link></li>
+                        <li className={location.pathname==='/blog'?"active":"link"} onClick={removetoggle} ><Link to="/blog">blog</Link></li>
                         <li className={location.pathname==='/contact'?"active":"link"} onClick={removetoggle} ><Link to="/contact">Contact</Link></li>
                     </ul>
                     <div className="togglem_menu" onClick={handletoggle}>
