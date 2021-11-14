@@ -1,7 +1,7 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer , useEffect} from "react";
 // import { products } from "../Products";
 import reducer from "../reducer";
-import { useEffect } from "react/cjs/react.development";
+// import { useEffect } from "react/cjs/react.development";
 // import ContextCart from "./ContextCart";
 
 export const cartContax = createContext();
