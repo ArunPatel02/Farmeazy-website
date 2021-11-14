@@ -7,7 +7,7 @@ const Productdata = (props) => {
 
   const getproduct = async()=>{
     try {
-        const response = await fetch(`/getproducts`, {
+        const response = await fetch(`https://farmeazy-api.herokuapp.com/getproducts`, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         headers: {
           'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ const Productdata = (props) => {
 
 const getproductbyid = async(id)=>{
   try {
-      const response = await fetch(`/getproducts/${id}`, {
+      const response = await fetch(`https://farmeazy-api.herokuapp.com/getproducts/${id}`, {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
       headers: {
         'Content-Type': 'application/json',
