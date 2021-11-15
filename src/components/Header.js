@@ -12,7 +12,6 @@ import logo from '../asserts/images/logo.png'
 import '../css/Header.css'
 import { cartContax } from '../context/Cart';
 import { Usercontext } from '../context/Userdata';
-import Cookies from 'js-cookie';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -46,7 +45,7 @@ const Header = ({productsearch , setsearch}) => {
    } , [getuser])
 
    const handlelogout = ()=>{
-       
+       localStorage.clear();
        document.querySelector(".usertoggle").classList.remove("active");
        setlogin(false);
    }
@@ -54,7 +53,6 @@ const Header = ({productsearch , setsearch}) => {
     const location =  useLocation()
 
     const handletoggle = ()=>{
-        localStorage.clear();
         document.querySelector(".header_links").classList.toggle("toggle_on");
     }
 
