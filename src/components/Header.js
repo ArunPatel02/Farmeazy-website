@@ -46,7 +46,7 @@ const Header = ({productsearch , setsearch}) => {
    } , [getuser])
 
    const handlelogout = ()=>{
-       Cookies.remove('token')
+       
        document.querySelector(".usertoggle").classList.remove("active");
        setlogin(false);
    }
@@ -54,6 +54,7 @@ const Header = ({productsearch , setsearch}) => {
     const location =  useLocation()
 
     const handletoggle = ()=>{
+        localStorage.clear();
         document.querySelector(".header_links").classList.toggle("toggle_on");
     }
 
